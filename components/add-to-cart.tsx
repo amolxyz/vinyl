@@ -17,7 +17,7 @@ export function AddToCart({ product }: { product: Product }) {
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="relative w-full max-w-[420px] mx-auto">
+      <div className="relative w-full max-w-[420px] mx-auto pb-24 md:pb-0">
         <motion.div
           className="flex flex-col items-center"
           initial={false}
@@ -74,7 +74,7 @@ export function AddToCart({ product }: { product: Product }) {
           <motion.div className="mt-8 relative w-full">
             <motion.button
               onClick={() => setIsShowingDescription(true)}
-              className="size-12 flex items-center justify-center bg-white absolute left-1/2 -translate-x-1/2 translate-y-[-40%] sm:translate-y-0"
+              className="size-12 flex items-center justify-center bg-white absolute left-1/2 -translate-x-1/2"
               variants={{
                 idle: { opacity: 1 },
                 showing: { opacity: 0 },
