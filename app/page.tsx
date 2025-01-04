@@ -82,7 +82,7 @@ export default function Page() {
                 product={product}
                 layoutId={`product-image-${product.id}`}
               />
-              <p className="font-medium text-center font-mono uppercase">
+              <p className="font-medium text-center font-mono uppercase title">
                 {product.album}
               </p>
             </div>

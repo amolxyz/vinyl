@@ -8,7 +8,7 @@ import { type Product } from '@/lib/products';
 export function AddToCart({ product }: { product: Product }) {
   const [isShowingDescription, setIsShowingDescription] = useState(false);
 
-  const productName = product.album.toUpperCase();
+  const productNameAndArtist = `${product.album.toUpperCase()} // ${product.artist.toUpperCase()}`;
 
   return (
     <motion.div
@@ -39,7 +39,7 @@ export function AddToCart({ product }: { product: Product }) {
               }}
               transition={{ type: 'tween', ease: 'easeInOut', duration: 0.2 }}
             >
-              {productName}
+              {productNameAndArtist}
             </motion.p>
             <motion.div
               className="flex items-center justify-between w-full absolute inset-0"
