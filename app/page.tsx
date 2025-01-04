@@ -83,7 +83,7 @@ export default function Page() {
                 layoutId={`product-image-${product.id}`}
               />
               <p className="font-medium text-center font-mono uppercase">
-                {product.id.split('-').slice(0, -1).join('-')}
+                {product.album}
               </p>
             </div>
           ))}

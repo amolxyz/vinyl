@@ -31,8 +31,8 @@ export function ProductImage({
       layoutId={layoutId}
     >
       <Image
-        src={product.image}
-        alt={product.name}
+        src={product.coverImage}
+        alt={product.album}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="object-contain transition-opacity duration-200 aspect-square"
