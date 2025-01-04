@@ -74,7 +74,7 @@ export function AddToCart({ product }: { product: Product }) {
           <motion.div className="mt-8 relative w-full">
             <motion.button
               onClick={() => setIsShowingDescription(true)}
-              className="size-12 flex items-center justify-center bg-white absolute left-1/2 -translate-x-1/2"
+              className="size-12 flex items-center justify-center bg-white absolute left-1/2 -translate-x-1/2 translate-y-[-40%] sm:translate-y-0"
               variants={{
                 idle: { opacity: 1 },
                 showing: { opacity: 0 },
