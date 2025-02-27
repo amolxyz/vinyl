@@ -13,7 +13,7 @@ export const products: Product[] = [
   {
     id: 'vinyl-02',
     artist: 'Pink Floyd',
-    album: 'The Dark Side',
+    album: 'DSOFM',
     year: 1973,
     coverImage:
       'https://mssadlt8nkffobic.public.blob.vercel-storage.com/the-dark-side-uqA3Bh9XjAZ5QIfWGWvFVivNcUtXAR.jpg',
@@ -123,7 +123,7 @@ export const products: Product[] = [
   {
     id: 'vinyl-12',
     artist: "Barry Can't Swim",
-    album: 'When Will We Land?',
+    album: 'WWWL?',
     year: 2023,
     coverImage:
       'https://mssadlt8nkffobic.public.blob.vercel-storage.com/When%20Will%20We%20Land%20Album%20Cover-HW43iHzJAKNuzAIbb5bLzXpLJjSSm8.jpg',
