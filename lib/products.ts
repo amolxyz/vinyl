@@ -70,6 +70,46 @@ export const products: Product[] = [
     description: 'The second installment in the Actual Life series, capturing moments and emotions through innovative electronic soundscapes.',
     sampleTrackUrl: 'https://open.spotify.com/embed/track/4k6Uh1HXdht4kqv8e0mJ2H',
   },
+  {
+    id: 'vinyl-08',
+    artist: 'Jamie xx',
+    album: 'In Waves',
+    year: 2015,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/in-waves-rtyHLMNqzlAsqaVjLwlb5u5niIbOWq.jpg',
+    description: 'An exploration of rhythmic complexity and sonic depth, blending UK dance music with immersive electronic soundscapes.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/0vduvDIA5KjiidpVFRJfpG',
+  },
+  {
+    id: 'vinyl-09',
+    artist: 'Massane',
+    album: 'Another Dawn',
+    year: 2021,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/another-dawn-r59SQpCK9OIPN8qucaguxoXsMF7eMi.jpeg',
+    description: 'A melodic journey through deep house and progressive sounds, capturing the essence of dawn with emotive melodies.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/5k6Uh1HXdht4kqv8e0mJ2H',
+  },
+  {
+    id: 'vinyl-10',
+    artist: 'Ben Böhmer',
+    album: 'Bloom',
+    year: 2019,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/Ben%20Bohmer%20Bloom%20Album%20Cover-O0D0o7lLsF9JQz54fvs3rmqqaBsIQ6.jpeg',
+    description: 'A lush and atmospheric album blending progressive house with ambient textures, creating a serene listening experience.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/1k6Uh1HXdht4kqv8e0mJ2H',
+  },
+  {
+    id: 'vinyl-11',
+    artist: 'Ben Böhmer',
+    album: 'Begin Again',
+    year: 2021,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/begin-again-Lln1dw4tNVCmDF2SNlhcA7nfS3uJHg.jpg',
+    description: 'An introspective album exploring themes of renewal and hope, with a blend of electronic and acoustic elements.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/2k6Uh1HXdht4kqv8e0mJ2H',
+  },
 ];
 
 export function getProductById(id: string): Product | undefined {
