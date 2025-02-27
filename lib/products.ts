@@ -71,6 +71,16 @@ export const products: Product[] = [
     sampleTrackUrl: 'https://open.spotify.com/embed/track/4k6Uh1HXdht4kqv8e0mJ2H',
   },
   {
+    id: 'vinyl-13',
+    artist: 'Fred again..',
+    album: 'Actual Life',
+    year: 2021,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/actual-life-1-Y4mPa9X5U6IeJP7PduLtQbdlzqpuN0.jpg',
+    description: 'The first installment in the Actual Life series, capturing moments and emotions through innovative electronic soundscapes.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/4k6Uh1HXdht4kqv8e0mJ2H',
+  },
+  {
     id: 'vinyl-08',
     artist: 'Jamie xx',
     album: 'In Waves',
@@ -109,6 +119,16 @@ export const products: Product[] = [
       'https://mssadlt8nkffobic.public.blob.vercel-storage.com/begin-again-Lln1dw4tNVCmDF2SNlhcA7nfS3uJHg.jpg',
     description: 'An introspective album exploring themes of renewal and hope, with a blend of electronic and acoustic elements.',
     sampleTrackUrl: 'https://open.spotify.com/embed/track/2k6Uh1HXdht4kqv8e0mJ2H',
+  },
+  {
+    id: 'vinyl-12',
+    artist: "Barry Can't Swim",
+    album: 'When Will We Land?',
+    year: 2023,
+    coverImage:
+      'https://mssadlt8nkffobic.public.blob.vercel-storage.com/When%20Will%20We%20Land%20Album%20Cover-HW43iHzJAKNuzAIbb5bLzXpLJjSSm8.jpg',
+    description: 'A captivating album blending electronic and acoustic elements, exploring themes of uncertainty and hope.',
+    sampleTrackUrl: 'https://open.spotify.com/embed/track/3k6Uh1HXdht4kqv8e0mJ2H',
   },
 ];
 
