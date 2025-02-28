@@ -94,6 +94,7 @@ export function VinylPlayer() {
           </motion.div>
 
           {/* Tonearm positioning adjusted for the new record size */}
+          
           <motion.div 
             className="absolute top-[15%] right-[-15%] w-48 h-4 bg-gray-400 rounded-full"
             style={{ 
