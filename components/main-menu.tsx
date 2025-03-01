@@ -141,7 +141,7 @@ export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
                   transition={{ delay: index * 0.1 }}
                 >
                   <Link
-                    href={`/${item.toLowerCase().replace(/ /g, '-')}`}
+                    href="/turning-table"
                     className="text-sm font-mono hover:opacity-70 transition-opacity whitespace-nowrap"
                   >
                     {item}
