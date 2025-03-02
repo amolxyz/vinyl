@@ -1,28 +1,72 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+
+interface Track {
+  title: string;
+  duration: number;
+}
 
 export function VinylPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(75);
   const [tonearmPosition, setTonearmPosition] = useState(30);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
+
+  useEffect(() => {
+    if (isPlaying && !audioUrl) {
+      fetch('/api/youtube')
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            setAudioUrl(data.url);
+            setCurrentTrack({
+              title: data.title,
+              duration: data.duration
+            });
+            if (audioRef.current) {
+              audioRef.current.src = data.url;
+              audioRef.current.play();
+            }
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching audio:', error);
+          setIsPlaying(false);
+        });
+    }
+  }, [isPlaying, audioUrl]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume / 100;
+    }
+  }, [volume]);
 
   const togglePlay = () => {
     if (isPlaying) {
-      // First stop the vinyl rotation
+      // First stop the vinyl rotation and audio
       setIsPlaying(false);
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
       // After rotation stops smoothly, move tonearm away
       setTimeout(() => {
         setTonearmPosition(30);
-      }, 800); // match the tonearm animation duration
+      }, 800);
     } else {
       // First move tonearm into position
       setTonearmPosition(0);
-      // After tonearm animation completes, start vinyl rotation
+      // After tonearm animation completes, start vinyl rotation and audio
       setTimeout(() => {
         setIsPlaying(true);
-      }, 800); // match the tonearm animation duration
+        if (audioRef.current && audioUrl) {
+          audioRef.current.play();
+        }
+      }, 800);
     }
   };
 
@@ -33,6 +77,7 @@ export function VinylPlayer() {
 
   return (
     <div className="relative w-full max-w-[800px] mx-auto bg-gradient-to-b from-[#f8f8f8] to-[#e8e8e8] rounded-[2rem] p-8 shadow-[inset_0_0_20px_rgba(0,0,0,0.15)] border-8 border-[#f0f0f0]">
+      <audio ref={audioRef} />
       
       {/* BPM Display */}
       <div className="absolute top-4 left-4 bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] rounded-2xl p-3 shadow-lg border border-[#3a3a3a]">
@@ -70,7 +115,7 @@ export function VinylPlayer() {
             </div>
           </motion.div>
 
-          {/* Metallic tonearm - keeping original shades */}
+          {/* Metallic tonearm */}
           <motion.div 
             className="absolute top-[15%] right-[-15%] w-48 h-4 bg-gradient-to-b from-[#e8e8e8] to-[#d0d0d0] rounded-full shadow-md"
             style={{ transformOrigin: "90% 50%" }}
