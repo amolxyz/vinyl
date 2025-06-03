@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { VinylPlayer } from '@/components/vinyl-player';
 
 export const metadata: Metadata = {
   title: 'On the turning table',
@@ -17,7 +16,9 @@ export default function AboutPage() {
         </p>
       </section>
       
-      <VinylPlayer />
+      <div className="flex-1 flex items-center justify-center">
+        {/* VinylPlayer component removed */}
+      </div>
     </div>
   );
 }
